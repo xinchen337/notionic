@@ -176,12 +176,11 @@ const Header = ({ navBarTitle, fullWidth }) => {
         <div className='flex items-center'>
           <Link passHref href='/' scroll={false} aria-label={BLOG.title}>
             <motion.div>
-              <Logo className='h-6 hover:text-blue-500 dark:hover:text-blue-500 fill-current' />
-                              <Image
-                  src='/favicon.png'
-                  alt='Logo'
-                  width={20}
-                  height={20}
+              <Image
+                src='/favicon.png'
+                alt='Logo'
+                width={20}
+                height={20}
                 />
             </motion.div>
           </Link>
