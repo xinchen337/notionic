@@ -1,5 +1,6 @@
 import { useEffect, useCallback, useState, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import BLOG from '@/blog.config'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
@@ -176,13 +177,12 @@ const Header = ({ navBarTitle, fullWidth }) => {
           <Link passHref href='/' scroll={false} aria-label={BLOG.title}>
             <motion.div>
               <Logo className='h-6 hover:text-blue-500 dark:hover:text-blue-500 fill-current' />
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M303.635 61L204.247 367.447H353.329L303.635 61Z" fill="black"/>
-<path d="M440.294 131.4L295.353 318.08L150.412 131.4L186.553 508.247H278.788H371.023L440.294 131.4Z" fill="black"/>
-<path d="M109 508.247H461" stroke="black" stroke-width="8.28235"/>
-<path d="M363.682 222.506L299.494 307.4" stroke="white" stroke-width="8.28235"/>
-</svg>
-
+                 <Image
+                  src='/favicon.png'
+                  alt='Logo'
+                  width={20}
+                  height={20}
+                />
             </motion.div>
           </Link>
           {navBarTitle ? (
